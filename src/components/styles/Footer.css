@@ -1,0 +1,127 @@
+:root{
+    --green: #014E56;
+    --very-dark-green: #002529;
+    --dark-green: #012F34;
+    --white: #fff;
+    --black: #000;
+    --soft-red: #F67E7E;
+}
+
+footer{
+    background-color: var(--very-dark-green);
+    padding: 5rem 0;
+}
+
+.footer-c{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-c > .box-left > img{
+    width: 12rem;
+    margin-bottom: 50px;
+}
+
+.footer-c > .box-left > ul{
+    display: flex;
+}
+
+.footer-c > .box-left > ul > li > a{
+    color: var(--white);
+    margin-right: 5rem;
+    font-weight: 600;
+    text-transform: lowercase;
+}
+
+.footer-c > .box-left > ul > li > a:hover{
+    color: var(--soft-red);
+}
+
+.box-right{
+    text-align: right;
+}
+
+.social-medias{
+    display: flex;
+    justify-content: right;
+    margin-bottom: 30px;
+}
+
+.social-medias > li{
+    color: var(--white);
+    margin-left: 2.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.social-medias > li:hover{
+    color: var(--soft-red);
+}
+
+.box-center > ul{
+    text-align: right;
+}
+
+.box-center > ul > li{
+    color: var(--white);
+    font-weight: 600;
+    opacity: .6;
+    line-height: 25px;
+    font-style: italic;
+}
+
+.copy{
+    width: 190px;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 25px;
+    opacity: .6;
+}
+
+@media(max-width: 850px) {
+
+    .footer-c{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-c > .box-left > img{
+        width: 12rem;
+        margin-bottom: 30px;
+    }
+    
+    .footer-c > .box-left > ul{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .footer-c > .box-left > ul > li > a{
+        margin-right: 0rem;
+        padding: 0 2.5rem;
+    }
+
+    .box-center > ul{
+        text-align: center;
+        margin: 50px auto;
+    }
+
+    .social-medias{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .social-medias > li{
+        margin-left: 0;
+        margin: 0 1.5rem;
+    }
+
+    .copy{
+        width: 100%;
+    }
+
+}

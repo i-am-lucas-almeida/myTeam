@@ -1,0 +1,55 @@
+:root{
+    --green: #014E56;
+    --dark-green: #002529;
+    --white: #fff;
+    --black: #000;
+    --soft-red: #F67E7E;
+}
+
+.card{
+    margin: 20px;
+    background-color: #012F34;
+    width: 32rem;
+    height: 28rem;
+    padding: 3rem;
+    text-align: center;
+}
+
+.card > img{
+    margin-bottom: 15px;
+    background-color: #b2eceb;
+    width: 10rem;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.card > h3{
+    color: #b2eceb;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card > h4{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.card > a{
+    color: var(--soft-red);
+    font-size: 2.5rem;
+    margin: 0 1.5rem;
+}
+
+.card > a:hover{
+    color: var(--white);
+}
+
+@media(max-width: 800px) {
+
+    .card{
+        margin: 20px auto;
+    }
+
+}
