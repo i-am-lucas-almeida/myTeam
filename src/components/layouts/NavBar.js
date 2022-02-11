@@ -38,8 +38,6 @@ export default function NavBar() {
 
                         <img src={imagePattern} alt='imagem de fundo' />
 
-
-
                         <ul>
 
                             <img src={imageClose} alt='close menu' className='closeMenu' onClick={CloseMenu} />

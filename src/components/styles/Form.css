@@ -88,6 +88,65 @@ textarea{
     color: var(--white);
 }
 
+.modal-success{
+    background-color: #00000070;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999999999999;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-success{
+    background-color: var(--white);
+    width: 35rem;
+    height: 35rem;
+    text-align: center;
+    border-radius: 10px;
+    padding: 3rem;
+}
+
+.box-success > .icon{
+    color: var(--green);
+    font-size: 7rem;
+    margin-bottom: 15px;
+}
+
+.box-success > h2{
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.box-success > p{
+    margin-bottom: 25px;
+    color: var(--black);
+    opacity: .5;
+    font-weight: 600;
+}
+
+.box-success > button{
+    background-color: var(--dark-green);
+    color: var(--white);
+    border: none;
+}
+
+.box-success > button:hover{
+    opacity: .9;
+}
+
+.showModal{
+    display: grid;
+}
+
+.hiddeModal{
+    display: none;
+}
+
 @media(max-width: 1100px) {
 
     .contact_container{

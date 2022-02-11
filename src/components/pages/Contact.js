@@ -17,7 +17,7 @@ export default function Contact() {
 
             <div className='contact-c'>
 
-                <div className="box-contact_left">
+                <div className="box-contact_left animate__animated animate__slideInDown">
 
                     <h1>Contato</h1>
 

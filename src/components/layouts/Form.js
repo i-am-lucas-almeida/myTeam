@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {AiFillCloseCircle} from 'react-icons/ai';
+import {FaCheckCircle} from 'react-icons/fa';
 import '../styles/Form.css';
 
 const Form = () => {
@@ -52,11 +53,10 @@ const Form = () => {
 
         //validate fullname
 
-        if ((formData.touched.fullName && formData.fullName.length < 5) ||
-            (formData.touched.fullName && formData.fullName.length > 30) ||
+        if ((formData.touched.fullName && formData.fullName.length < 10) ||
             (formData.touched.fullName && !formData.fullName.match(validName))
         ) {
-            errors.fullName = 'Seu nome deve ter entre 5 e 30 caracteres';
+            errors.fullName = 'Seu nome deve ter ao menos 10 caracteres';
         }
 
         if ((formData.touched.fullName && formData.fullName.match(validName))) {
@@ -65,15 +65,13 @@ const Form = () => {
 
         //validate title
 
-        if ((formData.touched.title && formData.title.length < 5) ||
-            (formData.touched.title && formData.title.length > 50)
-        ) {
-            errors.title = 'Seu título deve ter entre 5 e 50 caracteres';
+        if ((formData.touched.title && formData.title.length < 10)) 
+        {
+            errors.title = 'Seu título deve ter ao menos 10 caracteres';
         }
 
-        if ((formData.touched.title && formData.title.length > 5) && 
-            (formData.touched.title && formData.title.length <= 50)
-        ) {
+        if ((formData.touched.title && formData.title.length >= 10))
+        {
             valid++;
         }
 
@@ -96,7 +94,7 @@ const Form = () => {
             (formData.touched.message && formData.message.length === 0) || 
             (formData.touched.message && formData.message.length < 200)
         ) {
-            errors.message = 'Sua menssagem deve ter ao menos 200 caracteres';
+            errors.message = 'Sua mensagem deve ter ao menos 200 caracteres';
         }
 
         if (
@@ -109,14 +107,28 @@ const Form = () => {
 
     }
 
+    const [modalSuccess, setModal] = useState(false);
+
+    const CloseModalSuccess = () => {
+
+        setModal(false);
+        document.body.style.overflowY = 'auto';
+        window.location.reload(false);
+
+    }
+
     const onSubmit = (e) => {
 
         e.preventDefault();
+         console.log(valid)
+        //add database connection
 
-        if(valid === 3) {
+        if(valid === 4) {
 
-            alert('Thanks for message. I will get back in touch soon!');
-            window.location.reload(false);
+   
+
+            setModal(true);
+            document.body.style.overflowY = 'hidden';
 
         }
 
@@ -130,7 +142,23 @@ const Form = () => {
 
         <section className='contact_container'>
 
-            <form onSubmit={onSubmit}>
+            <div className={modalSuccess ? 'modal-success showModal' : 'modal-success hiddeModal'}>
+
+                <div className='box-success animate__animated animate__fadeInDown'>
+
+                    <FaCheckCircle className='icon' />
+
+                    <h2>Oba, recebemos sua mensagem!</h2>
+
+                    <p>Estamos ansiosos para trabalhar com você. Em breve nossa equipe retornara o contato.</p>
+
+                    <button onClick={CloseModalSuccess}>Entendi</button>
+
+                </div>
+
+            </div>
+
+            <form onSubmit={onSubmit} className='animate__animated animate__slideInDown'>
 
                 <fieldset>
 
@@ -164,7 +192,7 @@ const Form = () => {
 
                 <fieldset>
 
-                    <p>Menssagem</p>
+                    <p>Mensagem</p>
 
                     <textarea id="message" name="message" value={message} onChange={onChange} onBlur={onBlur} required />
 
