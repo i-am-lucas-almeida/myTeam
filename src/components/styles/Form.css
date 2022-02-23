@@ -20,7 +20,8 @@ fieldset{
 }
 
 fieldset > p{
-    font-weight: 400;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 input{
@@ -61,10 +62,15 @@ textarea{
 }
 
 .error_message{
+    margin-bottom: 10px;
     font-size: 1.4rem;
     color: var(--soft-red);
     display: flex;
     align-items: center;
+}
+
+.error{
+    border-color: var(--soft-red);
 }
 
 .error_message > span{

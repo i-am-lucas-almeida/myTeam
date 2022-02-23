@@ -28,13 +28,13 @@ export default function Home() {
 
                 <header className="header-c">
 
-                    <div className="header-left animate__animated animate__slideInDown">
+                    <div className="header-left animate__animated animate__fadeInUp">
 
                         <h1>Encontre os melhores <span>talentos</span></h1>
 
                     </div>
 
-                    <div className="header-right animate__animated animate__slideInDown">
+                    <div className="header-right animate__animated animate__fadeInUp">
 
                         <p>Encontrar as pessoas certas e construir equipes de alto desempenho pode ser difícil. A maioria das empresas não está aproveitando a abundância de talentos globais. Estamos prestes a mudar isso.</p>
 

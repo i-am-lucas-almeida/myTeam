@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {AiFillCloseCircle} from 'react-icons/ai';
+import {BsFillExclamationCircleFill} from 'react-icons/bs';
 import {FaCheckCircle} from 'react-icons/fa';
 import '../styles/Form.css';
 
@@ -53,10 +53,10 @@ const Form = () => {
 
         //validate fullname
 
-        if ((formData.touched.fullName && formData.fullName.length < 10) ||
+        if ((formData.touched.fullName && formData.fullName.length < 8) ||
             (formData.touched.fullName && !formData.fullName.match(validName))
         ) {
-            errors.fullName = 'Seu nome deve ter ao menos 10 caracteres';
+            errors.fullName = 'Digite seu nome completo';
         }
 
         if ((formData.touched.fullName && formData.fullName.match(validName))) {
@@ -80,8 +80,8 @@ const Form = () => {
         if ((formData.touched.email && formData.email.length === 0)) {
             errors.email = 'E-mail não pode ficar vazio';
         }
-
-        if ((formData.touched.email && !formData.email.match(validEmail))) {
+        
+        else if ((formData.touched.email && !formData.email.match(validEmail))) {
             errors.email = 'Esse e-mail é inválido';
         }
 
@@ -120,12 +120,10 @@ const Form = () => {
     const onSubmit = (e) => {
 
         e.preventDefault();
-         console.log(valid)
+        console.log(valid)
         //add database connection
 
         if(valid === 4) {
-
-   
 
             setModal(true);
             document.body.style.overflowY = 'hidden';
@@ -144,7 +142,7 @@ const Form = () => {
 
             <div className={modalSuccess ? 'modal-success showModal' : 'modal-success hiddeModal'}>
 
-                <div className='box-success animate__animated animate__fadeInDown'>
+                <div className='box-success animate__animated animate__slideInDown'>
 
                     <FaCheckCircle className='icon' />
 
@@ -152,55 +150,55 @@ const Form = () => {
 
                     <p>Estamos ansiosos para trabalhar com você. Em breve nossa equipe retornara o contato.</p>
 
-                    <button onClick={CloseModalSuccess}>Entendi</button>
+                    <button onClick={CloseModalSuccess}>Entendi</button>   
 
                 </div>
 
             </div>
 
-            <form onSubmit={onSubmit} className='animate__animated animate__slideInDown'>
+            <form onSubmit={onSubmit} className='animate__animated animate__fadeInUp'>
 
                 <fieldset>
 
                     <p>Nome</p>
 
-                    <input type="text" id="fullName" name="fullName" value={fullName} onChange={onChange} onBlur={onBlur} required />
+                    <input type="text" id="fullName" name="fullName" value={fullName} onChange={onChange} onBlur={onBlur} required className={errors.fullName ? 'error' : ''} />
 
-                    {errors.fullName && <small className='error_message'><AiFillCloseCircle/>&nbsp;{errors.fullName}</small>}
-
-                </fieldset>
-
-                <fieldset>
-
-                    <p>Título</p>
-
-                    <input type="text" id="title" name="title" value={title} onChange={onChange} onBlur={onBlur} required />
-
-                    {errors.title && <small className='error_message'><AiFillCloseCircle/>&nbsp;{errors.title}</small>}
+                    {errors.fullName && <small className='error_message'><BsFillExclamationCircleFill/>&nbsp;{errors.fullName}</small>}
 
                 </fieldset>
 
                 <fieldset>
 
-                    <p>E-mail</p>
+                <p>Título</p>
 
-                    <input type="email" id="email" name="email" value={email} onChange={onChange} onBlur={onBlur} required />
+                    <input type="text" id="title" name="title" value={title} onChange={onChange} onBlur={onBlur} required className={errors.title ? 'error' : ''} />
 
-                    {errors.email && <small className='error_message'><AiFillCloseCircle/>&nbsp;{errors.email}</small>}
+                    {errors.title && <small className='error_message'><BsFillExclamationCircleFill/>&nbsp;{errors.title}</small>}
 
                 </fieldset>
 
                 <fieldset>
 
-                    <p>Mensagem</p>
+                <p>E-mail</p>
 
-                    <textarea id="message" name="message" value={message} onChange={onChange} onBlur={onBlur} required />
+                    <input type="email" id="email" name="email" value={email} onChange={onChange} onBlur={onBlur} required  className={errors.email ? 'error' : ''} />
 
-                    {errors.message && <small className='error_message'><AiFillCloseCircle/>&nbsp;{errors.message}</small>}
+                    {errors.email && <small className='error_message'><BsFillExclamationCircleFill/>&nbsp;{errors.email}</small>}
 
                 </fieldset>
 
-                <button className='btn_submit'>enviar</button>
+                <fieldset>
+
+                <p>Mensagem</p>
+
+                    <textarea id="message" name="message" value={message} onChange={onChange} onBlur={onBlur} required className={errors.message ? 'error' : ''} />
+
+                    {errors.message && <small className='error_message'><BsFillExclamationCircleFill/>&nbsp;{errors.message}</small>}
+
+                </fieldset>
+
+                <button className='btn_submit'>enviar</button>            
 
             </form>
 

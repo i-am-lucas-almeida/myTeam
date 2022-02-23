@@ -18,13 +18,13 @@ export default function About() {
 
                 <div className="about-top">
 
-                    <div className='about-top_left animate__animated animate__slideInDown'>
+                    <div className='about-top_left animate__animated animate__fadeInUp'>
 
                         <h1>Quem somos?</h1>  
 
                     </div>
 
-                    <div className='about-top_right animate__animated animate__slideInDown'>
+                    <div className='about-top_right animate__animated animate__fadeInUp'>
 
                         <p>Ajudamos as empresas a construir equipes dinâmicas compostas pelos melhores talentos globais. Usando nossa rede de profissionais apaixonados, impulsionamos a inovação e entregamos resultados incríveis. Equipes talentosas e diversificadas moldam os melhores produtos e experiências. Levaremos essas equipes até você.</p>
 
