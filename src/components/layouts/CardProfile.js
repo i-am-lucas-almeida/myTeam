@@ -1,29 +1,49 @@
 import {FaTwitter, FaLinkedin} from 'react-icons/fa';
 import '../styles/CardProfile.css';
 
-export default function CardProfile({image, name, profile, about, linkLinkd, linkTwi}) {
+import iconCross from '../../images/icon-cross.svg';
+
+export default function CardProfile(props) {
 
     return(
 
-        <div className='card'>
+        <div className='card-c'>
 
-            <img src={image} alt={about} />
+            <div className={`${'card-perfil'} ${props.hidden} ${'animate__animated animate__fadeIn'}`}>
 
-            <h3>{name}</h3>
+                <img src={props.image} alt={props.about} />
 
-            <h4>{profile}</h4>
+                <h3>{props.name}</h3>
 
-            <a href={linkTwi} target='_blank' rel='noreferrer'>
+                <h4>{props.profile}</h4>
 
-                <FaTwitter/>
+            </div>
 
-            </a>
+            <div className={`${'card-descrition'} ${props.show} ${'animate__animated animate__fadeIn'}`}>
 
-            <a href={linkLinkd} target='_blank' rel='noreferrer'>
+                <h3>{props.name}</h3>
 
-                <FaLinkedin/>
+                <p>{props.reflection}</p>
 
-            </a>
+                <aside>
+
+                    <a href='https://twitter.com' target='_blank' rel='noreferrer'>
+                        <FaTwitter/>
+                    </a>
+
+                    <a href='https://www.linkedin.com' target='_blank' rel='noreferrer'>
+                        <FaLinkedin/>
+                    </a>
+
+                </aside>
+
+            </div>
+
+            <button onClick={props.event} className={`${'button-card'} ${props.btnState}`}>
+
+                <img src={iconCross} alt='icon' />
+
+            </button>
 
         </div>
 

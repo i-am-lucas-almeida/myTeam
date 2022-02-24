@@ -3,8 +3,7 @@ import Clients from '../layouts/Clients';
 import Profile from '../layouts/Profile';
 import '../../styles/About.css';
 
-import imagePattern_1 from '../../images/bg-pattern-home-1.svg';
-import imagePattern_2 from '../../images/bg-pattern-about-1-mobile-nav-1.svg';
+import imagePattern_1 from '../../images/bg-pattern-about-1-mobile-nav-1.svg';
 
 export default function About() {
 
@@ -12,9 +11,7 @@ export default function About() {
 
         <div>
 
-            <div className="container">
-
-            <img src={imagePattern_1} alt='imagem de fundo' className='pattern-about_left' /> 
+            <div className="container"> 
 
                 <div className="about-top">
 
@@ -30,7 +27,7 @@ export default function About() {
 
                     </div>
 
-                    <img src={imagePattern_2} alt='imagem de fundo' className='pattern-about_right' />  
+                    <img src={imagePattern_1} alt='imagem de fundo' className='pattern-about_right' />  
 
                 </div>
 

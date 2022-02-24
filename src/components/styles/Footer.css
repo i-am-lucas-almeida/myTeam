@@ -9,7 +9,7 @@
 
 footer{
     background-color: var(--very-dark-green);
-    padding: 5rem 0;
+    padding: 7rem 0;
 }
 
 .footer-c{
@@ -29,6 +29,7 @@ footer{
 
 .footer-c > .box-left > ul > li > a{
     color: var(--white);
+    font-size: 1.8rem;
     margin-right: 5rem;
     font-weight: 600;
     text-transform: lowercase;
@@ -51,7 +52,7 @@ footer{
 .social-medias > li{
     color: var(--white);
     margin-left: 2.5rem;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     cursor: pointer;
 }
 
