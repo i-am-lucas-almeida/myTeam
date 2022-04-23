@@ -45,6 +45,11 @@ img{
     position: relative;
 }
 
+.active{
+    color: var(--soft-red) !important;
+    border-color: var(--soft-red) !important;
+}
+
 @media(max-width: 1100px) {
 
     .container{

@@ -42,6 +42,7 @@
 
 .nav-menu > ul > li > a{
     color: var(--white);
+    border-bottom: 2.5px solid transparent;
     font-weight: 600;
     font-size: 2rem;
     margin-right: 5rem;
@@ -52,9 +53,28 @@
     color: var(--soft-red);
 }
 
+.btn-menu{
+    color: var(--white);
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2.5px solid var(--white);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .2s ease;
+    text-transform: lowercase;
+    padding: .5rem 2rem;
+}
+
+.btn-menu:hover{
+    color: var(--soft-red);
+    border-color: var(--soft-red);
+}
+
 @media(max-width: 950px) {
 
-    .navbar-c > a{
+    .btn-menu_desktop{
         display: none;
     }
 
@@ -72,7 +92,7 @@
 
     .nav-menu{
         background-color: #2C6269;
-        width: 50%;
+        width: 35rem;
         min-height: 100vh;
         padding: 0 5rem;
         position: fixed;
@@ -119,6 +139,13 @@
         margin-right: 0;
     }
 
+    .btn-menu_mobile{
+        border-bottom: 2.5px solid transparent;
+        border: none;
+        font-size: 2.5rem;
+        padding: 0;
+    }
+
 }
 
 @media(max-width: 800px) {
@@ -134,7 +161,7 @@
 @media(max-width: 650px) {
 
     .nav-menu{
-        width: 70%;
+        width: 30rem;
     }
 
 }

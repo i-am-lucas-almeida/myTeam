@@ -1,0 +1,61 @@
+[
+    {
+        "id": 1,
+        "name": "Adriana Almeida",
+        "profile": "Fundadora & CEO",
+        "quote": "“Sempre me surpreende quanto talento existe em todos os cantos do globo. Vamos encontrá-los.”",
+        "image": "./assets/avatar-nikita.jpg",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://www.linkedin.com"
+    },
+
+    {
+        "id": 2,
+        "name": "Marcelo Serrano",
+        "profile": "Cofundador & COO",
+        "quote": "“Equipes distribuídas exigiam processos exclusivos. Você precisa abordar o trabalho de forma inovadora.”",
+        "image": "./assets/avatar-christian.jpg",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://www.linkedin.com"
+    },
+
+    {
+        "id": 3,
+        "name": "Lázaro Lemos",
+        "profile": "Cofundador & COO",
+        "quote": "“A tecnologia está na vanguarda para habilitar equipes distribuídas. É aí que entramos.”",
+        "image": "./assets/avatar-cruz.jpg",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://www.linkedin.com"
+    },
+
+    {
+        "id": 4,
+        "name": "Antônio Ramos",
+        "profile": "Líder de Negócios",
+        "quote": "“Contratar pessoas semelhantes de origens semelhantes é uma maneira infalível de fracassar.”",
+        "image": "./assets/avatar-drake.jpg",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://www.linkedin.com"
+    },
+
+    {
+        "id": 5,
+        "name": "Caio A. Silva",
+        "profile": "Marketing de Leads",
+        "quote": "“Perspectivas únicas moldam produtos únicos, que é o que você precisa para sobreviver nos dias de hoje.”",
+        "image": "./assets/avatar-griffin.jpg",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://www.linkedin.com"
+    },
+    
+    {
+        "id": 6,
+        "name": "Alan Santos",
+        "profile": "Chefe de Talentos",
+        "quote": "“Equipes capacitadas criam produtos realmente incríveis. Coloque as no caminho e deixe-os segui-la.”",
+        "image": "./assets/avatar-aden.jpg",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://www.linkedin.com"
+    }
+]

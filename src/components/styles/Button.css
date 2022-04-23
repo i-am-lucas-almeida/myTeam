@@ -30,18 +30,6 @@ button{
     border-color: var(--soft-red);
 }
 
-.button-menu{
-    font-size: 2rem;
-    padding: .8rem 2rem;
-    color: var(--white);
-    border-color: var(--white);
-}
-
-.button-menu:hover{
-    color: var(--soft-red);
-    border-color: var(--soft-red);
-}
-
 .button-preFooter{
     border-color: var(--dark-green);
     color: var(--dark-green);

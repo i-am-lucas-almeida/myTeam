@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import { useState } from 'react';
 import Button from '../layouts/Button';
 import '../styles/NavBar.css';
@@ -44,17 +44,17 @@ export default function NavBar() {
 
                             <li>
 
-                                <Link to='/' onClick={CloseMenu}>Home</Link>
+                                <NavLink to='/'>Home</NavLink>
 
                             </li>
 
                             <li>
 
-                                <Link to='/sobre' onClick={CloseMenu}>Sobre</Link>
+                                <NavLink to='/sobre'>Sobre</NavLink>
 
                             </li>
 
-                            <Button color='button-menu' className='btn-menu' />
+                            <NavLink to='/contato' className='btn-menu btn-menu_mobile'>fale conosco</NavLink>
 
                         </ul>
 
@@ -64,7 +64,7 @@ export default function NavBar() {
 
                 <img src={imageMenu} alt='open menu' className='openMenu' onClick={OpenMenu} />
 
-                <Button color='button-nav' className='btn-nav' />
+                <NavLink to='/contato' className='btn-menu btn-menu_desktop'>fale conosco</NavLink>
 
             </nav>
 

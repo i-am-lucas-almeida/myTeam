@@ -2,36 +2,39 @@ import {FaTwitter, FaLinkedin} from 'react-icons/fa';
 import '../styles/CardProfile.css';
 
 import iconCross from '../../images/icon-cross.svg';
+import { useState } from 'react';
 
-export default function CardProfile(props) {
+export default function CardProfile({ image, name, profile, quote, twitter, linkedin }) {
+
+    const [eventCard, setEventCard] = useState();
 
     return(
 
         <div className='card-c'>
 
-            <div className={`${'card-perfil'} ${props.hidden} ${'animate__animated animate__fadeIn'}`}>
+            <div className={`card-perfil ${eventCard ? 'hidden-perfil' : ''}`}>
 
-                <img src={props.image} alt={props.about} />
+                <img src={image} alt={`imagem de perfil: ${name}`} />
 
-                <h3>{props.name}</h3>
+                <h3>{name}</h3>
 
-                <h4>{props.profile}</h4>
+                <h4>{profile}</h4>
 
             </div>
 
-            <div className={`${'card-descrition'} ${props.show} ${'animate__animated animate__fadeIn'}`}>
+            <div className={`card-description ${eventCard ? 'show-profile' : ''}`}>
 
-                <h3>{props.name}</h3>
+                <h3>{name}</h3>
 
-                <p>{props.reflection}</p>
+                <p>{quote}</p>
 
                 <aside>
 
-                    <a href='https://twitter.com' target='_blank' rel='noreferrer'>
+                    <a href={twitter} target='_blank' rel='noreferrer'>
                         <FaTwitter/>
                     </a>
 
-                    <a href='https://www.linkedin.com' target='_blank' rel='noreferrer'>
+                    <a href={linkedin} target='_blank' rel='noreferrer'>
                         <FaLinkedin/>
                     </a>
 
@@ -39,9 +42,9 @@ export default function CardProfile(props) {
 
             </div>
 
-            <button onClick={props.event} className={`${'button-card'} ${props.btnState}`}>
+            <button onClick={() => setEventCard(!eventCard)} className={`button-card ${eventCard ? 'btn-active' : ''}`}>
 
-                <img src={iconCross} alt='icon' />
+                <img src={iconCross} alt='ícone ver mais' />
 
             </button>
 

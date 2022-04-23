@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {FaFacebookSquare, FaPinterest, FaTwitter} from 'react-icons/fa';
 
 import '../styles/Footer.css';
@@ -20,13 +20,13 @@ export default function Footer() {
 
                         <li>
 
-                            <Link to='/'>Home</Link>
+                            <NavLink to='/'>Home</NavLink>
 
                         </li>
 
                         <li>
 
-                            <Link to='/sobre'>Sobre</Link>
+                            <NavLink to='/sobre'>Sobre</NavLink>
 
                         </li>
 
