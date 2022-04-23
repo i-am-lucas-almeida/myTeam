@@ -1,6 +1,5 @@
 import {NavLink} from 'react-router-dom';
 import { useState } from 'react';
-import Button from '../layouts/Button';
 import '../styles/NavBar.css';
 
 import imageLogo from '../../images/logo.svg';
