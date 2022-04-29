@@ -1,6 +1,6 @@
 # MyTeam | Encontre os melhores talentos
 
-![design-page](https://user-images.githubusercontent.com/77863766/166012544-4bd8ea90-ef8b-40e8-9c1f-0aa0f52a5d53.png)
+![design-myteam](https://user-images.githubusercontent.com/77863766/166061635-8026eed6-6a5e-4ce4-bc2b-0806069220cc.png)
 
 ## Sobre
 
