@@ -1,4 +1,4 @@
-# MyTeam | Encontre os melhores talentos
+# [MyTeam | Encontre os melhores talentos](https://myteamtalents.vercel.app/)
 
 ![design-myteam](https://user-images.githubusercontent.com/77863766/166061635-8026eed6-6a5e-4ce4-bc2b-0806069220cc.png)
 
@@ -19,5 +19,5 @@ O site foi desenvolvido com uso de React com auxílio de hooks, react routes e d
 
 ## Links
 
-* Acesse o projeto finalizado: [https://myteam.com](https://lucasalmeida-myteam.netlify.app/)
+* Acesse o projeto finalizado: [https://myteam.com](https://myteamtalents.vercel.app/)
 * Direitos reservados a [Frontend Mentor](https://www.frontendmentor.io/home)
