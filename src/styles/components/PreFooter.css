@@ -1,0 +1,59 @@
+@import '../variables.css';
+
+.preFooter-c {
+    background-color: var(--soft-red);
+    padding: 8rem 0;
+    color: var(--dark-green);
+    position: relative;
+    overflow: hidden;
+}
+
+.preFooter-c>div {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.preFooter-c>div>h2 {
+    font-size: 4.5rem;
+}
+
+.pattern-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+@media(max-width: 1100px) {
+
+    .preFooter-c {
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+    }
+
+    .preFooter-c>div>h2 {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media(max-width: 950px) {
+
+    .preFooter-c>div {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .preFooter-c>div>h2 {
+        margin-bottom: 20px;
+    }
+
+    .pattern-left {
+        position: absolute;
+        left: 0;
+        bottom: -25px;
+    }
+
+}
